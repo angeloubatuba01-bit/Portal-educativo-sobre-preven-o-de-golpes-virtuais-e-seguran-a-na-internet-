@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Educativo: Prevenção de Golpes Virtuais e Segurança na Internet</title>
+  <meta name="description" content="Portal Digital Educativo voltado à conscientização, prevenção de fraudes online e inclusão digital segura da comunidade.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade para Leitor de Tela -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho Principal (Hero) -->
+  <header class="main-header" role="banner">
+    <div class="header-container">
+      <span class="portal-badge">Guia Prático de Segurança Digital</span>
+      <h1>
+        <span class="header-title-main">Portal Digital Educativo</span>
+        <span class="header-title-sub">Prevenção de Golpes Virtuais e Segurança na Internet</span>
+      </h1>
+      <p class="subtitle">
+        Capacitando estudantes, cidadãos e novos internautas com orientações simples, recursos didáticos e ferramentas interativas para uma navegação ética, consciente e protegida.
+      </p>
+
+      <!-- Navegação para Outras Abas / Páginas -->
+      <nav class="nav-pills" aria-label="Navegação para outras páginas">
+        <a href="simulador.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Simulador Interativo
+        </a>
+        <a href="checklist.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Checklist do Usuário
+        </a>
+        <a href="sos.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Canais de Ajuda (SOS)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Central: Somente os Principais Golpes com os Balões -->
+  <main id="conteudo-principal" class="main-container" role="main">
+
+    <section id="principais-golpes">
+      <h2 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Conheça e Identifique os Principais Golpes Virtuais
+      </h2>
+      <p class="lead-text">
+        Os criminosos virtuais utilizam técnicas de <strong>Engenharia Social</strong> — manipulando emoções como medo, urgência, curiosidade ou promessas de ganho fácil — para obter senhas, códigos de validação e transferências financeiras.
+      </p>
+
+      <!-- Barra de Pesquisa Rápida de Golpes -->
+      <div style="margin-bottom: 14px;">
+        <label for="scamSearchInput" style="font-weight: 600; display: block; margin-bottom: 4px; font-size: 0.88rem;">
+          🔍 Pesquise um tipo de golpe ou palavra-chave (ex: Pix, WhatsApp, Falso Emprego, Cartão):
+        </label>
+        <input 
+          type="text" 
+          id="scamSearchInput" 
+          placeholder="Digite para filtrar os guias em tempo real..." 
+          style="width: 100%; max-width: 500px; padding: 8px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.9rem;"
+        >
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1: Phishing (Ícone Autêntico e Vivo de E-mail) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Phishing.">
+            <div class="card-header">
+              <div class="card-icon icon-email" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="30" height="30">
+                  <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.66,0,3-1.34,3-3V16.2z"/>
+                  <path fill="#1e88e5" d="M3,16.2l5,2.75l5,4.75L13,40H6c-1.66,0-3-1.34-3-3V16.2z"/>
+                  <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/>
+                  <path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C8.132,7.553,5.642,8.04,4.502,9.914L3,12.298z"/>
+                  <path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341c1.744-1.306,4.234-0.819,5.374,1.055L45,12.298z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Engenharia Social</span>
+                <h3>Phishing (E-mails e Sites Falsos)</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Mensagens fraudulentas que imitam bancos, lojas ou governo para roubar senhas e dados.
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> Mensagens fraudulentas por e-mail, redes sociais ou SMS que imitam bancos, lojas famosas, Correios ou órgãos do governo (Receita Federal).</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>Erros gramaticais ou e-mails com extensões estranhas (ex: <code>@suporte-banco123.xyz</code>).</li>
+                  <li>Links encurtados ou botões pedindo "atualização cadastral imediata".</li>
+                  <li>Ameaças de bloqueio de conta, CPF cancelado ou cobranças falsas.</li>
+                </ul>
+              </div>
+              <div class="alert alert-danger">
+                <strong>Dica de Proteção:</strong> Nunca clique em links recebidos por mensagem. Acesse o site oficial digitando você mesmo o endereço no navegador ou usando o aplicativo oficial.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2: Golpe do WhatsApp (Ícone Oficial e Vivo do WhatsApp) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Golpe do WhatsApp.">
+            <div class="card-header">
+              <div class="card-icon icon-whatsapp" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+                  <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.6 11.6 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.3-.3-.5A11.6 11.6 0 1 1 16 27.5zm6.4-8.7c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2s-1 1.1-1.2 1.3-.4.3-.8.1a9.5 9.5 0 0 1-2.8-1.7 10.5 10.5 0 0 1-2-2.4c-.2-.4 0-.6.1-.8.2-.2.4-.4.5-.6l.4-.6c.1-.2.1-.4 0-.6s-.8-2-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2 7.5 7.5 0 0 0 1.6 4 17.2 17.2 0 0 0 6.6 5.8c2.8 1.2 3.4 1 4 1a3.4 3.4 0 0 0 2.3-1.6 2.8 2.8 0 0 0 .2-1.6c-.2-.2-.5-.3-.9-.5z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Aplicativos de Mensagem</span>
+                <h3>Golpe do WhatsApp e Falso Parente</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Golpista usa foto de familiar com número desconhecido e alega urgência para pedir Pix.
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> O golpista coloca a foto de um filho ou familiar em um número desconhecido e envia mensagens dizendo que trocou de celular e precisa pagar uma conta urgente.</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>Pedidos urgentes de transferência Pix para contas com nomes de pessoas desconhecidas.</li>
+                  <li>Desculpas para não atender ligações normais ou chamadas de vídeo ("microfone quebrou").</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning">
+                <strong>Dica de Proteção:</strong> Ligue imediatamente para o número tradicional do seu parente por linha comum ou telefone fixo para checar a história antes de fazer qualquer transferência!
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3: Fraudes no Pix e Boletos (Ícone Oficial e Vivo do Pix) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Golpes do Pix.">
+            <div class="card-header">
+              <div class="card-icon icon-pix" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+                  <path d="M22.8 8.4l-4.4-4.4c-1.3-1.3-3.5-1.3-4.8 0L9.2 8.4c-1.3 1.3-1.3 3.5 0 4.8l2.2 2.2L9.2 17.6c-1.3 1.3-1.3 3.5 0 4.8l4.4 4.4c1.3 1.3 3.5 1.3 4.8 0l4.4-4.4c1.3-1.3 1.3-3.5 0-4.8l-2.2-2.2 2.2-2.2c1.3-1.3 1.3-3.5 0-4.8zm-9.2-2.7a1.1 1.1 0 0 1 1.6 0l4.1 4.1-3.3 3.3-4.9-4.9 2.5-2.5zm-2.5 14.3a1.1 1.1 0 0 1 0-1.6l3.3-3.3 3.3 3.3-4.1 4.1a1.1 1.1 0 0 1-1.6 0l-.9-.9zm10.7-.9a1.1 1.1 0 0 1 0 1.6l-2.5 2.5-4.1-4.1 3.3-3.3 3.3 3.3zm0-8.2l-3.3 3.3-3.3-3.3 4.1-4.1a1.1 1.1 0 0 1 1.6 0l.9.9a1.1 1.1 0 0 1 0 1.6z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Fraude Financeira</span>
+                <h3>Golpes do Pix e Boletos Adulterados</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Boletos fraudados, QR Codes alterados em páginas falsas e golpes do "Bug do Pix".
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> Invasão de sites de compras falsos, geração de QR Codes alterados ou falsos intermediadores de leilões e compras online.</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>Na tela de confirmação do Pix, o nome do recebedor não confere com o da empresa oficial.</li>
+                  <li>Descontos absurdos de 70% ou 80% apenas para pagamento via Pix à vista.</li>
+                  <li>"Bug do Pix": promessas de que ao enviar R$ 100 para uma chave você receberá R$ 1.000 em dobro.</li>
+                </ul>
+              </div>
+              <div class="alert alert-danger">
+                <strong>Dica de Proteção:</strong> Sempre confira atentamente o <strong>Nome do Beneficiário</strong> e a instituição na tela final antes de digitar sua senha do Pix.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4: Falsa Central Telefônica (Ícone Vivo de Telefonia) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Falsa Central Telefônica.">
+            <div class="card-header">
+              <div class="card-icon icon-telefonia" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28">
+                  <path fill="#ffffff" d="M22.5 19.3c-1.4-.3-2.8-.7-4.1-1.2-.5-.2-1.1 0-1.5.4l-2.6 2.6c-3.8-2-6.9-5.1-8.9-8.9l2.6-2.6c.4-.4.6-1 .4-1.5-.5-1.3-.9-2.7-1.2-4.1C6.9 3.4 6.3 3 5.7 3H2.5C1.7 3 1 3.7 1 4.5 1 18.6 12.4 30 26.5 30c.8 0 1.5-.7 1.5-1.5v-3.2c0-.6-.4-1.2-1-1.3l-4.5-4.7z"/>
+                  <path fill="#38bdf8" d="M19 4a11 11 0 0 1 11 11h-3a8 8 0 0 0-8-8V4z"/>
+                  <path fill="#facc15" d="M19 9a6 6 0 0 1 6 6h-2.5a3.5 3.5 0 0 0-3.5-3.5V9z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Vishing (Telefonia)</span>
+                <h3>Falsa Central Telefônica do Banco</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Ligações fingindo compras suspeitas para induzir a vítima a transferir dinheiro ou passar senhas.
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> O cliente recebe ligação gravada dizendo que foi feita uma compra suspeita de alto valor nas Casas Bahia ou Mercado Livre e pede para "digitar 2 para contestar".</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>O atendente pede para você transferir dinheiro para uma "conta de segurança temporária".</li>
+                  <li>Pedem para você instalar um aplicativo de suporte remoto (como TeamViewer ou AnyDesk).</li>
+                </ul>
+              </div>
+              <div class="alert alert-danger">
+                <strong>Dica de Proteção:</strong> Bancos NUNCA ligam pedindo senhas, transferências de proteção ou instalação de programas no celular. Desligue e ligue no número do verso do seu cartão!
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 5: Golpe do Emprego / Tarefas (Ícone Vivo de Redes Sociais) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Golpe das Tarefas e Falso Emprego.">
+            <div class="card-header">
+              <div class="card-icon icon-social" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+                  <path d="M16 2.9c4.3 0 4.8 0 6.5.1 1.5.1 2.4.3 2.9.5.7.3 1.2.6 1.7 1.1.5.5.9 1 1.1 1.7.2.5.4 1.4.5 2.9.1 1.7.1 2.2.1 6.5s0 4.8-.1 6.5c-.1 1.5-.3 2.4-.5 2.9-.3.7-.6 1.2-1.1 1.7-.5.5-1 .9-1.7 1.1-.5.2-1.4.4-2.9.5-1.7.1-2.2.1-6.5.1s-4.8 0-6.5-.1c-1.5-.1-2.4-.3-2.9-.5-.7-.3-1.2-.6-1.7-1.1-.5-.5-.9-1-1.1-1.7-.2-.5-.4-1.4-.5-2.9-.1-1.7-.1-2.2-.1-6.5s0-4.8.1-6.5c.1-1.5.3-2.4.5-2.9.3-.7.6-1.2 1.1-1.7.5-.5 1-.9 1.7-1.1.5-.2 1.4-.4 2.9-.5 1.7-.1 2.2-.1 6.5-.1zm0-2.9C11.6 0 11 0 9.3.1 7.6.2 6.4.5 5.3.9 4.2 1.3 3.3 1.9 2.3 2.9c-1 1-1.6 1.9-2 3C-.1 7-.4 8.2-.5 9.9-.6 11.6-.6 12.2-.6 16.5s0 4.9.1 6.6c.1 1.7.4 2.9.8 4 1.4 3.7 4.3 6.6 8 8 1.1.4 2.3.7 4 .8 1.7.1 2.3.1 6.6.1s4.9 0 6.6-.1c1.7-.1 2.9-.4 4-.8 3.7-1.4 6.6-4.3 8-8 1.1-.4 2.3-.7 4-.8 1.7-.1 2.3-.1 6.6-.1s4.9 0 6.6-.1c1.7-.1 2.9-.4 4-.8 1.1-.4 2-.9 3-1.9 1-1 1.6-1.9 2-3 .4-1.1.7-2.3.8-4 .1-1.7.1-2.3.1-6.6s0-4.9-.1-6.6c-.1-1.7-.4-2.9-.8-4-.4-1.1-.9-2-1.9-3-1-1-1.9-1.6-3-2C29.6.5 28.4.2 26.7.1 25 0 24.4 0 20.1 0H16zm0 7.8c-4.5 0-8.2 3.7-8.2 8.2s3.7 8.2 8.2 8.2 8.2-3.7 8.2-8.2-3.7-8.2-8.2-8.2zm0 13.5c-2.9 0-5.3-2.4-5.3-5.3s2.4-5.3 5.3-5.3 5.3 2.4 5.3 5.3-2.4 5.3-5.3 5.3zm8.5-15.8c-1.1 0-1.9.9-1.9 1.9s.9 1.9 1.9 1.9 1.9-.9 1.9-1.9-.9-1.9-1.9-1.9z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Redes Sociais</span>
+                <h3>Golpe das Tarefas e Falsa Vaga de Emprego</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Promessa de lucros diários curtindo vídeos ou avaliando produtos, exigindo depósitos e Pix prévios.
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> Ofertas no Telegram, WhatsApp ou Instagram prometendo R$ 300 a R$ 800 por dia apenas curtindo vídeos no YouTube ou avaliando hotéis.</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>No início pagam pequenos valores (R$ 10) para conquistar sua confiança.</li>
+                  <li>Depois exigem que você faça depósitos e Pix de "recarga" cada vez maiores para liberar o saldo acumulado.</li>
+                </ul>
+              </div>
+              <div class="alert alert-warning">
+                <strong>Dica de Proteção:</strong> Trabalho legítimo remunera você; não exige que você pague dinheiro antecipado para poder trabalhar.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 6: Invasão de Contas (Ícone Vivo de Invasão de Contas e Alerta) -->
+        <div class="card-wrapper">
+          <article class="card interactive-card" aria-label="Card informativo: Invasão de Contas.">
+            <div class="card-header">
+              <div class="card-icon icon-invasao" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28">
+                  <path fill="#ffffff" d="M16 2L4 6v8c0 8.5 5.1 14.5 12 16 6.9-1.5 12-7.5 12-16V6L16 2z"/>
+                  <path fill="#dc2626" d="M16 4.3L6.5 7.5v6.5c0 6.9 4.1 11.8 9.5 13.3 5.4-1.5 9.5-6.4 9.5-13.3V7.5L16 4.3z"/>
+                  <path fill="#facc15" d="M19 13v-2a3 3 0 0 0-6 0v2h-1v7h8v-7h-1zm-4-2a1 1 0 0 1 2 0v2h-2v-2zm1 4.5a1 1 0 0 1 .5 1.9v1.1h-1v-1.1a1 1 0 0 1 .5-1.9z"/>
+                  <path fill="#ffffff" d="M22 6l2 2-2 2-2-2 2-2z"/>
+                </svg>
+              </div>
+              <div class="card-title-wrap">
+                <span class="badge-type">Invasão de Contas</span>
+                <h3>Invasão de Contas e Falsos Sorteios</h3>
+              </div>
+            </div>
+
+            <p class="card-brief-desc">
+              Roubo de perfis no Instagram e WhatsApp para anunciar falsas vendas a amigos e contatos.
+            </p>
+
+            <!-- Conteúdo Completo que Expande ao Passar o Cursor ou Clicar -->
+            <div class="card-expandable-content">
+              <div class="card-body">
+                <p><strong>Como Funciona:</strong> Perfis invadidos começam a anunciar venda urgente de eletrodomésticos (geladeiras, TVs, celulares) por motivo de mudança ou investimentos milagrosos.</p>
+                <p><strong>Sinais de Alerta:</strong></p>
+                <ul>
+                  <li>Preços muito abaixo do valor de mercado exigindo transferência imediata via Pix.</li>
+                  <li>A conta pede para você enviar um código recebido no seu celular para "validar o sorteio".</li>
+                </ul>
+              </div>
+              <div class="alert alert-success">
+                <strong>Dica de Proteção:</strong> O código de 6 dígitos que chega no seu SMS é a sua chave secreta. <strong>Nunca</strong> repasse esse código a ninguém sob nenhuma hipótese!
+              </div>
+            </div>
+          </article>
+        </div>
+      </div><!-- /cards-grid -->
+    </section>
+
+    <!-- Chamada para Outras Abas / Ferramentas -->
+    <section style="margin-top: 40px; background: #ffffff; padding: 25px; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm); text-align: center;">
+      <h3 style="color: #1e1b4b; margin-bottom: 8px;">Explore as Ferramentas Interativas do Portal</h3>
+      <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto 20px; font-size: 0.95rem;">
+        Teste suas habilidades no <strong>Simulador Gamificado com Modo Detetive e 10 Cenários Reais</strong>, avalie seu <strong>Nível de Blindagem</strong> no checklist de segurança ou consulte os canais oficiais de socorro e denúncia:
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="simulador.html" class="btn btn-primary">🎮 Ir para o Simulador de Golpes (10 Desafios)</a>
+        <a href="checklist.html" class="btn btn-secondary">📋 Abrir Checklist do Usuário</a>
+        <a href="sos.html" class="btn btn-danger">🚨 Ver Canais de Ajuda (SOS)</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Institucional Educativo -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Sobre o Portal Educativo</h4>
+        <p>Plataforma aberta e didática desenvolvida para orientar e capacitar cidadãos, estudantes e novos internautas sobre proteção contra crimes cibernéticos e fraudes digitais.</p>
+        <p><strong>Missão:</strong> Reduzir a vulnerabilidade digital através da conscientização preventiva e difusão de boas práticas na internet.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Foco e Conteúdo Educacional</h4>
+        <p><strong>Prevenção Ativa:</strong> Como reconhecer gatilhos de engenharia social, mensagens falsas, páginas de phishing e fraudes financeiras no Pix.</p>
+        <p><strong>Cidadania Digital:</strong> Acesso democrático, ético e gratuito à segurança da informação para toda a sociedade.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licença & Acesso Comunitário</h4>
+        <p>Este material foi desenvolvido com finalidade estritamente educacional e pública, sob a licença de Conteúdo Educacional Aberto (Creative Commons BY-NC-SA).</p>
+        <p>Disponível gratuitamente para estudantes, escolas e público em geral.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Portal Educativo de Segurança Digital &bull; Todos os direitos reservados para fins didáticos e comunitários.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

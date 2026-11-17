@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Golpes: É Golpe ou É Seguro? | Portal Educativo</title>
+  <meta name="description" content="Simulador prático e gamificado de detecção de fraudes virtuais com 10 cenários reais no smartphone e modo detetive com inspeção de pistas.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Link de Acessibilidade para Leitor de Tela -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho Principal (Hero) -->
+  <header class="main-header" role="banner">
+    <div class="header-container">
+      <span class="portal-badge">Módulo Interativo de Treinamento</span>
+      <h1>Simulador: "É Golpe ou É Seguro?"</h1>
+      <p class="subtitle">
+        Coloque sua percepção à prova! Analise 10 situações cotidianas reais direto na tela do smartphone, utilize o Modo Detetive para inspecionar pistas e confira sua pontuação e nível de blindagem digital.
+      </p>
+
+      <!-- Navegação entre Abas -->
+      <nav class="nav-pills" aria-label="Navegação entre páginas do portal">
+        <a href="index.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Início (Principais Golpes)
+        </a>
+        <a href="simulador.html" class="active" aria-current="page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Simulador Interativo
+        </a>
+        <a href="checklist.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Checklist do Usuário
+        </a>
+        <a href="sos.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Canais de Ajuda (SOS)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Central: Simulador com Novas Funções -->
+  <main id="conteudo-principal" class="main-container" role="main">
+
+    <section id="simulador-quiz">
+      <div class="sim-top-toolbar">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 6px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            Desafio Prático de Tomada de Decisão
+          </h2>
+          <p class="lead-text" style="margin-bottom: 15px;">
+            Identifique as ameaças antes que elas façam vítimas. Analise o remetente, a presença de links e gatilhos psicológicos:
+          </p>
+        </div>
+
+        <!-- Modo de Desafio -->
+        <div class="sim-category-filter-group" role="group" aria-label="Modo de Desafio">
+          <button type="button" class="filter-pill active" data-category="all">Desafio</button>
+        </div>
+      </div>
+
+      <div class="simulator-container">
+        <!-- Cabeçalho do Simulador: Placar e Indicadores de Progresso -->
+        <div class="sim-header">
+          <div class="sim-progress-indicator-area">
+            <strong>Desafio <span id="currentQuestionNum">1</span> de <span id="totalQuestionsNum">10</span></strong>
+            <div class="sim-indicators" id="simIndicators" aria-label="Indicadores de progresso de cada questão">
+              <!-- Gerado dinamicamente via JS -->
+            </div>
+          </div>
+          <div class="sim-score-wrapper">
+            <span class="sim-score" id="simScore">0 pts</span>
+            <span class="sim-streak" id="simStreak">🔥 Sequência: 0</span>
+          </div>
+        </div>
+
+        <!-- Mockup Realista de Celular iPhone com Telas Autênticas dos Aplicativos -->
+        <div class="iphone-mockup-wrapper">
+          <div class="iphone-chassis" id="scenarioCardElement">
+            
+            <!-- Botões Laterais de Hardware do iPhone -->
+            <div class="iphone-side-btn iphone-side-mute"></div>
+            <div class="iphone-side-btn iphone-side-vol-up"></div>
+            <div class="iphone-side-btn iphone-side-vol-down"></div>
+            <div class="iphone-side-btn iphone-side-power"></div>
+
+            <!-- Tela do iPhone -->
+            <div class="iphone-screen" id="iphoneScreen">
+              
+              <!-- Barra de Status do iPhone (Hora, Dynamic Island e Bateria) -->
+              <div class="iphone-status-bar">
+                <span class="iphone-clock" id="iphoneClock">09:41</span>
+                
+                <!-- Dynamic Island com Câmera Frontal e Sensor -->
+                <div class="iphone-dynamic-island">
+                  <div class="island-camera"></div>
+                  <div class="island-sensor"></div>
+                </div>
+
+                <div class="iphone-status-icons">
+                  <span class="status-icon-cell">5G</span>
+                  <span class="status-icon-wifi">📶</span>
+                  <div class="iphone-battery-pill">
+                    <div class="iphone-battery-fill"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cabeçalho do Aplicativo Ativo (WhatsApp, SMS, E-mail, Banco, Safari) -->
+              <div class="iphone-app-header" id="phoneAppTopBar">
+                <!-- Renderizado dinamicamente via JS -->
+              </div>
+
+              <!-- Corpo do Aplicativo: Chat, E-mail ou Notificação -->
+              <div class="iphone-app-body" id="phoneAppBody">
+                <div class="iphone-date-badge" id="iphoneChatDate">Hoje</div>
+
+                <!-- Balãozinho da Mensagem Chegando (com animação de chegada) -->
+                <div class="incoming-bubble-container arrived" id="incomingBubbleContainer">
+                  <!-- Renderizado dinamicamente via JS com o balão do app específico -->
+                </div>
+
+                <!-- Ferramentas Úteis dentro do iPhone: Modo Detetive e Dica -->
+                <div class="iphone-inline-tools">
+                  <button type="button" class="iphone-tool-btn" id="btnToggleClues" title="Destaca detalhes suspeitos na mensagem">
+                    <span id="btnCluesText">🔍 Modo Detetive</span>
+                  </button>
+                  <button type="button" class="iphone-tool-btn" id="btnToggleHint" title="Obter uma dica pedagógica">
+                    <span>💡 Dica de Especialista</span>
+                  </button>
+                </div>
+
+                <!-- Caixa Expansível de Dica dentro do iPhone -->
+                <div class="scenario-hint-box" id="scenarioHintBox" style="display: none;"></div>
+
+                <!-- Painel de Feedback e Análise Pedagógica dentro do iPhone -->
+                <div class="sim-feedback" id="simFeedback" role="alert" style="display: none;">
+                  <!-- Preenchido dinamicamente via JS pós-voto -->
+                </div>
+              </div>
+
+              <!-- Dock de Tomada de Decisão na Tela do iPhone -->
+              <div class="iphone-decision-dock" id="iphoneDecisionDock">
+                <div class="iphone-dock-title" id="iphoneDockTitle">
+                  Esta mensagem é segura ou é uma tentativa de golpe?
+                </div>
+
+                <!-- Botões de Tomada de Decisão -->
+                <div class="sim-actions" id="simActionsArea">
+                  <button type="button" class="btn-decision-iphone btn-iphone-danger" id="btnGolpe" aria-label="Classificar como Golpe">
+                    <span class="btn-icon">🚨</span>
+                    <span>É GOLPE!</span>
+                  </button>
+                  <button type="button" class="btn-decision-iphone btn-iphone-success" id="btnSeguro" aria-label="Classificar como Seguro">
+                    <span class="btn-icon">🛡️</span>
+                    <span>É CONFIÁVEL / SEGURO</span>
+                  </button>
+                </div>
+
+                <!-- Botão Próximo Desafio dentro do iPhone -->
+                <div class="iphone-next-action" id="iphoneNextAction" style="display: none;">
+                  <button type="button" class="btn-decision-iphone btn-iphone-next" id="btnNextScenario">
+                    <span>Próximo Desafio</span>
+                    <span class="btn-icon">➔</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Indicador de Barra Home do iPhone -->
+              <div class="iphone-home-indicator"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Painel de Conclusão: Pontuação e Nível de Blindagem -->
+        <div class="sim-final-results" id="simFinalResults" style="display: none;">
+          <div class="results-header">
+            <div class="results-trophy" id="resultsTrophy">🏆</div>
+            <h3 id="resultsTitle">Desafio Concluído!</h3>
+            <p id="resultsSubtitle">Confira o seu resultado e nível de blindagem digital abaixo:</p>
+          </div>
+
+          <div class="results-stats-grid">
+            <div class="stat-card">
+              <span class="stat-num" id="statFinalScore">0 pts</span>
+              <span class="stat-label">Pontuação Total</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" id="statAccuracy">0%</span>
+              <span class="stat-label">Taxa de Acerto</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" id="statBlindagemBadge">🛡️ Blindado</span>
+              <span class="stat-label">Nível de Blindagem</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" id="statCorrectAnswers">0 / 10</span>
+              <span class="stat-label">Decisões Corretas</span>
+            </div>
+          </div>
+
+          <!-- Diagnóstico e Feedback Pedagógico -->
+          <div class="results-feedback-box" id="resultsFeedbackBox" style="background: #ffffff; border-radius: 14px; padding: 22px 24px; border: 1.5px solid #e2e8f0; margin: 24px auto 0; max-width: 650px; text-align: left; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);">
+            <h4 style="color: #1e1b4b; margin-bottom: 8px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+              <span>💡</span> Diagnóstico de Segurança Digital
+            </h4>
+            <p id="resultsFeedbackText" style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              Sua pontuação reflete sua capacidade de identificar golpes cotidianos no WhatsApp, Pix, SMS e E-mails.
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 28px;">
+            <button type="button" class="btn btn-primary" id="btnRestartAll" style="font-size: 1rem; padding: 12px 28px;">
+              🔄 Reiniciar Desafio
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Navegação de Apoio -->
+    <div style="margin-top: 35px; text-align: center; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="index.html" class="btn btn-secondary">⬅️ Voltar para a Página Principal (Principais Golpes)</a>
+      <a href="checklist.html" class="btn btn-primary">📋 Abrir Checklist do Usuário</a>
+    </div>
+
+  </main>
+
+  <!-- Rodapé Institucional Educativo -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Sobre o Portal Educativo</h4>
+        <p>Plataforma aberta e didática desenvolvida para orientar e capacitar cidadãos, estudantes e novos internautas sobre proteção contra crimes cibernéticos e fraudes digitais.</p>
+        <p><strong>Missão:</strong> Reduzir a vulnerabilidade digital através da conscientização preventiva e difusão de boas práticas na internet.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Foco e Conteúdo Educacional</h4>
+        <p><strong>Prevenção Ativa:</strong> Como reconhecer gatilhos de engenharia social, mensagens falsas, páginas de phishing e fraudes financeiras no Pix.</p>
+        <p><strong>Cidadania Digital:</strong> Acesso democrático, ético e gratuito à segurança da informação para toda a sociedade.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licença & Acesso Comunitário</h4>
+        <p>Este material foi desenvolvido com finalidade estritamente educacional e pública, sob a licença de Conteúdo Educacional Aberto (Creative Commons BY-NC-SA).</p>
+        <p>Disponível gratuitamente para estudantes, escolas e público em geral.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Portal Educativo de Segurança Digital &bull; Todos os direitos reservados para fins didáticos e comunitários.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
